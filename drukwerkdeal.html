@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Drukwerkdeal Visit</title>
+<meta name="description" content="Our company visit to Drukwerkdeal in Deventer: history, the journey of a print order, and a hands-on gang-run puzzle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07080F; --panel:#0E1120; --panel2:#141831; --ink:#F3F4F8; --muted:#9AA0B4; --line:#262B45;
+  --red:#C8321F; --orange:#E2782B; --gold:#D9A441; --ok:#3FB37F;
+  --c1:#E2782B; --c2:#4C8DF6; --c3:#3FB37F; --c4:#D9A441; --c5:#B46BE8; --c6:#E85D75; --c7:#3CC4C8; --c8:#9DB04A;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,-apple-system,sans-serif;line-height:1.55;-webkit-tap-highlight-color:transparent;
+  background-image:radial-gradient(900px 500px at 85% -10%,rgba(200,50,31,.22),transparent 60%),radial-gradient(700px 400px at -10% 30%,rgba(76,141,246,.08),transparent 60%)}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px 64px}
+h1,h2,h3{font-family:'Archivo',system-ui,sans-serif;margin:0;line-height:1.05}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:inherit}
+.mono{font-family:'JetBrains Mono',monospace}
+.chapter{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin:0 0 12px}
+section{padding:56px 0 8px}
+section > h2{font-size:clamp(30px,7vw,48px);font-weight:900;letter-spacing:-.01em;margin-bottom:12px}
+section > p.intro{color:var(--muted);max-width:620px;margin:0 0 26px;font-size:16.5px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:rgba(7,8,15,.75);border-bottom:1px solid var(--line)}
+.nav .in{max-width:960px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px}
+.logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(140deg,#7a1408,var(--red));display:grid;place-items:center;font-family:'Archivo',system-ui,sans-serif;font-weight:900}
+.nav b{font-family:'Archivo',system-ui,sans-serif;letter-spacing:.04em;font-size:14px}
+.nav a.back{margin-left:auto;font-size:13px;color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+
+/* hero */
+.hero{padding:64px 0 24px;text-align:center}
+.hero .chapter{display:inline-block;border:1px solid rgba(226,120,43,.35);background:rgba(200,50,31,.08);border-radius:999px;padding:7px 14px}
+.hero h1{font-size:clamp(46px,13vw,108px);font-weight:900;letter-spacing:-.03em;margin:14px 0 14px}
+.hero h1 span{color:var(--red)}
+.hero .sub{font-family:'Archivo',system-ui,sans-serif;font-weight:700;font-size:clamp(19px,4.6vw,28px);max-width:720px;margin:0 auto 14px}
+.hero p.lead{color:var(--muted);max-width:600px;margin:0 auto}
+.pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:22px}
+.pills span{font-family:'JetBrains Mono',monospace;font-size:12.5px;border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:#C9CDDB}
+.cta{display:inline-flex;align-items:center;gap:8px;margin-top:28px;background:var(--red);border:0;border-radius:999px;padding:14px 24px;font-weight:700;box-shadow:0 10px 30px rgba(200,50,31,.35);text-decoration:none}
+
+/* facts */
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px}
+@media(min-width:760px){.facts{grid-template-columns:repeat(4,1fr)}}
+.fact{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px 14px;text-align:center}
+.fact b{display:block;font-family:'Archivo',system-ui,sans-serif;font-weight:900;font-size:clamp(26px,7vw,36px)}
+.fact small{color:var(--muted);font-size:13px}
+
+/* timeline */
+.tl{position:relative;display:grid;gap:14px;padding-left:22px}
+.tl::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--orange),var(--red),transparent)}
+.ev{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}
+.ev::before{content:"";position:absolute;left:-22px;top:26px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--orange)}
+.ev .yr{font-family:'Archivo',system-ui,sans-serif;font-weight:900;font-size:34px;color:var(--gold)}
+.ev:last-child .yr{color:var(--orange)}
+.ev h3{font-size:20px;margin:6px 0 6px}
+.ev p{margin:0;color:var(--muted)}
+
+/* pipeline */
+.steps{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
+.st{flex:1 0 auto;min-width:96px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 10px;text-align:left;position:relative}
+.st .n{font-family:'JetBrains Mono';font-size:11px;color:var(--muted)}
+.st .t{display:block;font-weight:700;font-size:14px;margin-top:2px;white-space:nowrap}
+.st[aria-selected="true"]{background:linear-gradient(160deg,#3a0f08,var(--panel2));border-color:var(--red)}
+.st[aria-selected="true"] .n{color:var(--orange)}
+.st.done::after{content:"";position:absolute;top:10px;right:10px;width:8px;height:8px;border-radius:50%;background:var(--ok)}
+.stage{margin-top:12px;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px;display:grid;gap:18px}
+@media(min-width:760px){.stage{grid-template-columns:200px 1fr;align-items:center}}
+.stage svg.ill{width:100%;max-width:200px;height:auto;margin:0 auto;display:block}
+.stage h3{font-size:24px;margin-bottom:8px}
+.stage p{margin:0 0 12px;color:#C9CDDB}
+.stage .eng{border-left:3px solid var(--orange);background:rgba(226,120,43,.07);padding:10px 12px;border-radius:0 10px 10px 0;font-size:14.5px;color:var(--ink)}
+.stage .eng b{color:var(--orange);font-family:'JetBrains Mono';font-size:11px;letter-spacing:.12em;display:block;margin-bottom:2px}
+.stage-nav{display:flex;gap:10px;margin-top:4px}
+.btn{border:1px solid var(--line);background:var(--panel2);border-radius:999px;padding:11px 18px;font-weight:700;font-size:14.5px}
+.btn.red{background:var(--red);border-color:var(--red)}
+.btn:disabled{opacity:.4;cursor:default}
+
+/* game */
+.game{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:18px}
+.g-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.meter{flex:1;min-width:180px}
+.meter .lbl{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:6px}
+.meter .lbl b{color:var(--ink);font-family:'JetBrains Mono'}
+.bar{height:10px;border-radius:10px;background:#1d2240;overflow:hidden;position:relative}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--red),var(--orange));transition:width .3s}
+.bar .goal{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ok);left:90%}
+.g-grid{display:grid;gap:16px}
+@media(min-width:760px){.g-grid{grid-template-columns:1.05fr 1fr}}
+.sheet-wrap{background:#0a0c18;border:1px dashed #3a4170;border-radius:16px;padding:12px}
+.sheet-wrap .cap{font-family:'JetBrains Mono';font-size:11px;color:var(--muted);letter-spacing:.1em;margin-bottom:8px;display:flex;justify-content:space-between}
+.sheet{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;aspect-ratio:6/4;background:#F4F1EA;border-radius:6px;padding:6px;position:relative;overflow:hidden}
+.cell{border-radius:3px;background:repeating-linear-gradient(135deg,#e6e0d2 0 5px,#efe9dc 5px 10px);transition:background .2s}
+.cell.on{background:var(--cc)}
+.cell.on.first{position:relative}
+.sheet{transition:gap .5s}
+.sheet.cutting{gap:8px}
+.sheet.cutting .cell.on{box-shadow:0 2px 6px rgba(0,0,0,.35)}
+.sheet.printing{animation:press .8s ease}
+@keyframes press{0%{transform:scale(1)}40%{transform:scale(.96);filter:brightness(1.3)}100%{transform:scale(1)}}
+.orders{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;align-content:start}
+.ord{display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:left;background:var(--panel2);border:1.5px solid var(--line);border-radius:14px;padding:10px 12px;min-height:72px;transition:border-color .15s,transform .15s}
+.ord .sw{display:flex;gap:3px}
+.ord .sw i{width:10px;height:10px;border-radius:2px;background:var(--cc)}
+.ord b{font-size:13.5px;line-height:1.2}
+.ord small{color:var(--muted);font-size:12px}
+.ord.in{border-color:var(--cc);background:color-mix(in srgb,var(--cc) 16%,var(--panel2))}
+.ord.shake{animation:shake .4s}
+@keyframes shake{25%,75%{transform:translateX(-5px)}50%{transform:translateX(5px)}}
+.g-msg{min-height:48px;margin:14px 0 0;font-size:15px;color:#C9CDDB}
+.g-msg b.ok{color:var(--ok)} .g-msg b.warn{color:var(--gold)} .g-msg b.bad{color:var(--red)}
+.g-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+
+/* ideas */
+.ideas{display:grid;gap:12px}
+@media(min-width:760px){.ideas{grid-template-columns:repeat(3,1fr)}}
+.idea{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}
+.idea .k{font-family:'JetBrains Mono';font-size:12px;color:var(--orange)}
+.idea h3{font-size:20px;margin:8px 0}
+.idea p{margin:0;color:var(--muted);font-size:15px}
+
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="in"><span class="logo">D</span><b>DRUKWERKDEAL</b><a class="back" href="./">← All artifacts</a></div></nav>
+
+<div class="wrap">
+
+  <!-- CHAPTER 1 -->
+  <section class="hero">
+    <p class="chapter">Chapter 1 · The entrance</p>
+    <h1>DRUKWERK<span>DEAL</span></h1>
+    <p class="sub">From digital pixel to physical paper: a modern e-commerce &amp; print engine</p>
+    <p class="lead">An interactive walkthrough based on our team's company visit to Drukwerkdeal's automated print facility in Deventer.</p>
+    <div class="pills"><span>Cimpress ecosystem</span><span>Web-to-print</span><span>Mass customization</span></div>
+    <a class="cta" href="#journey">Start the tour ↓</a>
+  </section>
+
+  <div class="facts">
+    <div class="fact"><b>2005</b><small>Founded</small></div>
+    <div class="fact"><b>Deventer</b><small>Headquarters</small></div>
+    <div class="fact"><b>2014</b><small>Joined Cimpress</small></div>
+    <div class="fact"><b>NL + BE</b><small>Main markets</small></div>
+  </div>
+
+  <!-- CHAPTER 2 -->
+  <section>
+    <p class="chapter">Chapter 2 · Foundation &amp; history</p>
+    <h2>Built in Deventer, scaled online</h2>
+    <p class="intro">Drukwerkdeal started as an online print shop and grew into one of the larger web-to-print companies in the Benelux, selling custom printed products to businesses.</p>
+    <div class="tl">
+      <div class="ev"><span class="yr">2005</span><h3>Deventer roots</h3><p>Founded in Deventer with a simple idea: let businesses order custom print through a website instead of phone quotes and paper catalogues.</p></div>
+      <div class="ev"><span class="yr">2014</span><h3>Joining Cimpress</h3><p>Acquired by Cimpress, the parent company of Vistaprint, becoming part of a global group of mass-customization businesses.</p></div>
+      <div class="ev"><span class="yr">Today</span><h3>Print for Dutch &amp; Belgian businesses</h3><p>Business cards, flyers, banners, stationery and promotional products, each one customized, ordered online and produced in volume.</p></div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 3 -->
+  <section id="journey">
+    <p class="chapter">Chapter 3 · From click to creation</p>
+    <h2>Follow one order</h2>
+    <p class="intro">Every order is unique, yet the factory has to run like a production line. Tap through the six stages an order goes through.</p>
+    <div class="steps" id="steps" role="tablist"></div>
+    <div class="stage" id="stage" role="tabpanel" aria-live="polite"></div>
+  </section>
+
+  <!-- CHAPTER 4 -->
+  <section id="game">
+    <p class="chapter">Chapter 4 · Your turn</p>
+    <h2>Gang the sheet</h2>
+    <p class="intro">Printing one customer's 100 business cards on its own press run would waste paper and setup time. So orders from different customers are combined on one sheet. Tap orders to place them on the press sheet and fill at least <b>90%</b> of it before sending it to the press.</p>
+    <div class="game">
+      <div class="g-top">
+        <div class="meter">
+          <div class="lbl"><span>Sheet usage</span><b id="pct">0%</b></div>
+          <div class="bar"><i id="fill"></i><span class="goal" title="90% target"></span></div>
+        </div>
+        <div class="mono" style="font-size:13px;color:var(--muted)">Batch <b id="batch" style="color:var(--ink)">1</b> · Best <b id="best" style="color:var(--ink)">–</b></div>
+      </div>
+      <div class="g-grid">
+        <div class="sheet-wrap">
+          <div class="cap"><span>PRESS SHEET</span><span id="cells">0 / 24 slots</span></div>
+          <div class="sheet" id="sheet"></div>
+        </div>
+        <div class="orders" id="orders"></div>
+      </div>
+      <p class="g-msg" id="msg" aria-live="polite">Pick orders on the right. Bigger jobs take more slots on the sheet.</p>
+      <div class="g-actions">
+        <button class="btn red" id="press" disabled>Send to press</button>
+        <button class="btn" id="clear">Clear sheet</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 5 -->
+  <section>
+    <p class="chapter">Chapter 5 · What's behind it</p>
+    <h2>Three ideas behind the factory</h2>
+    <div class="ideas">
+      <div class="idea"><span class="k">01</span><h3>Mass customization</h3><p>Every product is personal, but the process is standardized, so small custom orders can be made at mass-production cost.</p></div>
+      <div class="idea"><span class="k">02</span><h3>Batching</h3><p>Combining many small orders onto shared press sheets spreads setup cost and cuts paper waste, the puzzle you just solved.</p></div>
+      <div class="idea"><span class="k">03</span><h3>Automation</h3><p>File checks, routing and order tracking are handled by software, so people focus on running the machines and on quality.</p></div>
+    </div>
+  </section>
+
+  <footer><span>Daniel · Vincent · Kaan · Dawon</span><a href="./">← Back to all artifacts</a></footer>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+
+/* ---------- Chapter 3: order journey ---------- */
+const STEPS = [
+  { t: 'Order', ill: 'cart',
+    d: 'A customer picks a product, size, paper and quantity on the website, uploads their design and pays. The price is calculated instantly, so no phone quote is needed.',
+    e: 'The product configurator turns endless custom options into a standard order record that the factory can read.' },
+  { t: 'File check', ill: 'check',
+    d: 'Software checks the uploaded file automatically: correct size, bleed, resolution and colour mode. Problems are flagged before anything is printed.',
+    e: 'Catching errors early is cheaper than reprinting later. It is quality control at the very start of the line.' },
+  { t: 'Ganging', ill: 'grid',
+    d: 'Orders with the same paper and finish are grouped and placed together on one large press sheet, often mixing many different customers.',
+    e: 'A packing and batching problem: fill every sheet as fully as possible to reduce waste and setup time.' },
+  { t: 'Printing', ill: 'press',
+    d: 'The combined sheet runs through the press. Because dozens of orders share one run, the setup cost is split across all of them.',
+    e: 'Machine time is the bottleneck, so scheduling decides how many orders the factory can handle per day.' },
+  { t: 'Cut & finish', ill: 'cut',
+    d: 'The printed sheets are cut into individual products and finished, for example by folding, laminating or rounding corners, and sorted back to each order.',
+    e: 'After ganging, everything has to be split up again. Tracking each piece back to the right order is critical.' },
+  { t: 'Ship', ill: 'box',
+    d: 'Orders are packed, labelled and handed to delivery partners, so the customer receives a parcel at their door.',
+    e: 'Lead time and on-time delivery are what the customer actually feels, so the whole chain is tuned for speed.' }
+];
+const ILL = {
+  cart: '<rect x="30" y="40" width="140" height="90" rx="10"/><path d="M50 70h100M50 92h60"/><circle cx="140" cy="150" r="10"/><circle cx="70" cy="150" r="10"/>',
+  check: '<rect x="45" y="20" width="110" height="140" rx="8"/><path d="M70 60h60M70 80h60M70 100h30"/><circle cx="135" cy="130" r="22"/><path d="M125 130l7 7 13-14"/>',
+  grid: '<rect x="25" y="35" width="150" height="110" rx="6"/><path d="M75 35v110M125 35v110M25 72h150M25 108h150"/>',
+  press: '<rect x="30" y="60" width="140" height="70" rx="10"/><circle cx="75" cy="95" r="18"/><circle cx="125" cy="95" r="18"/><path d="M40 150h120M60 40h80"/>',
+  cut: '<rect x="35" y="35" width="130" height="100" rx="6" stroke-dasharray="7 6"/><path d="M100 30v110M35 85h130"/><path d="M150 140l20 20M170 140l-20 20"/>',
+  box: '<path d="M40 70l60-30 60 30v70l-60 30-60-30z"/><path d="M40 70l60 30 60-30M100 100v70"/>'
+};
+let cur = 0; const seen = new Set([0]);
+function renderSteps() {
+  $('#steps').innerHTML = STEPS.map((s, i) =>
+    `<button class="st${seen.has(i) && i !== cur ? ' done' : ''}" role="tab" aria-selected="${i === cur}" data-i="${i}"><span class="n">0${i + 1}</span><span class="t">${s.t}</span></button>`).join('');
+  document.querySelectorAll('.st').forEach(b => b.addEventListener('click', () => go(+b.dataset.i)));
+  const s = STEPS[cur];
+  $('#stage').innerHTML = `
+    <svg class="ill" viewBox="0 0 200 180" fill="none" stroke="#E2782B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ILL[s.ill]}</svg>
+    <div>
+      <p class="chapter" style="margin-bottom:6px">Stage ${cur + 1} of ${STEPS.length}</p>
+      <h3>${s.t}</h3>
+      <p>${s.d}</p>
+      <div class="eng"><b>ENGINEERING VIEW</b>${s.e}</div>
+      <div class="stage-nav">
+        <button class="btn" id="prev" ${cur === 0 ? 'disabled' : ''}>← Back</button>
+        <button class="btn red" id="next">${cur === STEPS.length - 1 ? 'Try ganging yourself →' : 'Next stage →'}</button>
+      </div>
+    </div>`;
+  $('#prev').addEventListener('click', () => go(cur - 1));
+  $('#next').addEventListener('click', () => cur === STEPS.length - 1 ? $('#game').scrollIntoView({ behavior: 'smooth' }) : go(cur + 1));
+  const active = document.querySelector('.st[aria-selected="true"]');
+  active && active.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+}
+function go(i) { cur = Math.max(0, Math.min(STEPS.length - 1, i)); seen.add(cur); renderSteps(); }
+renderSteps();
+
+/* ---------- Chapter 4: gang-run puzzle ---------- */
+const SLOTS = 24;
+const POOL = [
+  ['Business cards', 'Bakery', 2], ['Business cards', 'Law firm', 2], ['Flyers', 'Gym', 4], ['Flyers', 'Café', 4],
+  ['Postcards', 'Museum', 3], ['Stickers', 'Startup', 1], ['Menu cards', 'Restaurant', 6], ['Invitations', 'Wedding', 5],
+  ['Door hangers', 'Hotel', 3], ['Posters', 'Concert', 8], ['Labels', 'Brewery', 2], ['Gift vouchers', 'Shop', 3]
+];
+const COLORS = ['--c1', '--c2', '--c3', '--c4', '--c5', '--c6', '--c7', '--c8'];
+let orders = [], placed = [], batch = 1, best = 0, locked = false;
+
+const sum = a => a.reduce((t, x) => t + x, 0);
+function canReach(sizes, target) { // subset-sum check so every batch is solvable to the target
+  const r = new Set([0]);
+  for (const s of sizes) for (const v of [...r]) if (v + s <= SLOTS) r.add(v + s);
+  return [...r].some(v => v >= target);
+}
+function newBatch() {
+  let pick;
+  do {
+    pick = [...POOL].sort(() => Math.random() - .5).slice(0, 8);
+  } while (sum(pick.map(p => p[2])) <= SLOTS || !canReach(pick.map(p => p[2]), SLOTS));
+  orders = pick.map((p, i) => ({ id: i, type: p[0], client: p[1], size: p[2], color: COLORS[i] }));
+  placed = []; locked = false;
+  $('#sheet').classList.remove('cutting');
+  $('#press').textContent = 'Send to press';
+  render();
+  msg('Pick orders on the right. Bigger jobs take more slots on the sheet.');
+}
+function used() { return sum(placed.map(id => orders[id].size)); }
+function render() {
+  const u = used();
+  let cells = [];
+  placed.forEach(id => { for (let k = 0; k < orders[id].size; k++) cells.push(orders[id].color); });
+  const sheet = $('#sheet');
+  sheet.querySelectorAll('.cell').forEach(c => c.remove());
+  const frag = document.createDocumentFragment();
+  for (let i = 0; i < SLOTS; i++) {
+    const d = document.createElement('div');
+    d.className = 'cell' + (cells[i] ? ' on' : '');
+    if (cells[i]) d.style.setProperty('--cc', `var(${cells[i]})`);
+    frag.appendChild(d);
+  }
+  sheet.appendChild(frag);
+  $('#orders').innerHTML = orders.map(o => `
+    <button class="ord${placed.includes(o.id) ? ' in' : ''}" data-id="${o.id}" style="--cc:var(${o.color})" ${locked ? 'disabled' : ''} aria-pressed="${placed.includes(o.id)}">
+      <span class="sw">${'<i></i>'.repeat(o.size)}</span><b>${o.type}</b><small>${o.client} · ${o.size} slot${o.size > 1 ? 's' : ''}</small>
+    </button>`).join('');
+  document.querySelectorAll('.ord').forEach(b => b.addEventListener('click', () => toggle(+b.dataset.id, b)));
+  const pct = Math.round(u / SLOTS * 100);
+  $('#pct').textContent = pct + '%';
+  $('#fill').style.width = pct + '%';
+  $('#cells').textContent = `${u} / ${SLOTS} slots`;
+  $('#press').disabled = locked ? false : placed.length === 0;
+  $('#batch').textContent = batch;
+  $('#best').textContent = best ? best + '%' : '–';
+}
+function toggle(id, el) {
+  if (locked) return;
+  if (placed.includes(id)) placed = placed.filter(x => x !== id);
+  else if (used() + orders[id].size > SLOTS) {
+    el.classList.add('shake'); setTimeout(() => el.classList.remove('shake'), 400);
+    msg(`<b class="bad">Doesn't fit.</b> Only ${SLOTS - used()} slot${SLOTS - used() === 1 ? '' : 's'} left, so try a smaller order or swap one out.`);
+    return;
+  } else placed.push(id);
+  render();
+  const left = SLOTS - used();
+  msg(left === 0 ? '<b class="ok">Sheet completely full!</b> Send it to the press.' : `${placed.length} order${placed.length === 1 ? '' : 's'} on the sheet · ${left} slot${left === 1 ? '' : 's'} still empty.`);
+}
+function msg(h) { $('#msg').innerHTML = h; }
+$('#clear').addEventListener('click', () => { if (!locked) { placed = []; render(); msg('Sheet cleared.'); } });
+$('#press').addEventListener('click', () => {
+  if (locked) { batch++; newBatch(); return; }
+  const pct = Math.round(used() / SLOTS * 100), n = placed.length;
+  locked = true; best = Math.max(best, pct);
+  const sheet = $('#sheet');
+  sheet.classList.add('printing');
+  setTimeout(() => { sheet.classList.remove('printing'); sheet.classList.add('cutting'); }, 800);
+  let verdict;
+  if (pct === 100) verdict = `<b class="ok">Perfect sheet: 100% used.</b> ${n} customers share one press setup and zero paper is wasted.`;
+  else if (pct >= 90) verdict = `<b class="ok">Press-ready: ${pct}% used.</b> ${n} customers share one setup. Only ${100 - pct}% of the sheet is waste.`;
+  else if (pct >= 70) verdict = `<b class="warn">Printed, but ${100 - pct}% of the sheet is waste.</b> A real planner would hold this sheet until more orders came in.`;
+  else verdict = `<b class="bad">Only ${pct}% used.</b> Most of this paper is thrown away. Combining more orders makes each one cheaper.`;
+  msg(verdict);
+  $('#press').textContent = 'Next batch →';
+  render();
+});
+newBatch();
+</script>
+</body>
+</html>
