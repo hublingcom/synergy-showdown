@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Drukwerkdeal Visit</title>
-<meta name="description" content="Our company visit to Drukwerkdeal in Deventer: history, the journey of a print order, and a hands-on gang-run puzzle.">
+<meta name="description" content="Our company visit to Drukwerkdeal in Deventer: history, the journey of a print order, and a hands-on press sheet puzzle.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
   --c1:#E2782B; --c2:#4C8DF6; --c3:#3FB37F; --c4:#D9A441; --c5:#B46BE8; --c6:#E85D75; --c7:#3CC4C8; --c8:#9DB04A;
 }
 *{box-sizing:border-box}
-html,body{margin:0}
+html,body{margin:0;overflow-x:hidden}
 body{background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,-apple-system,sans-serif;line-height:1.55;-webkit-tap-highlight-color:transparent;
   background-image:radial-gradient(900px 500px at 85% -10%,rgba(200,50,31,.22),transparent 60%),radial-gradient(700px 400px at -10% 30%,rgba(76,141,246,.08),transparent 60%)}
 .wrap{max-width:960px;margin:0 auto;padding:0 16px 64px}
@@ -38,7 +38,7 @@ section > p.intro{color:var(--muted);max-width:620px;margin:0 0 26px;font-size:1
 /* hero */
 .hero{padding:64px 0 24px;text-align:center}
 .hero .chapter{display:inline-block;border:1px solid rgba(226,120,43,.35);background:rgba(200,50,31,.08);border-radius:999px;padding:7px 14px}
-.hero h1{font-size:clamp(46px,13vw,108px);font-weight:900;letter-spacing:-.03em;margin:14px 0 14px}
+.hero h1{font-size:min(104px,calc((100vw - 40px) / 7.6));font-weight:900;letter-spacing:-.03em;margin:14px 0 14px;white-space:nowrap}
 .hero h1 span{color:var(--red)}
 .hero .sub{font-family:'Archivo',system-ui,sans-serif;font-weight:700;font-size:clamp(19px,4.6vw,28px);max-width:720px;margin:0 auto 14px}
 .hero p.lead{color:var(--muted);max-width:600px;margin:0 auto}
@@ -141,7 +141,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
     <p class="chapter">Chapter 1 · The entrance</p>
     <h1>DRUKWERK<span>DEAL</span></h1>
     <p class="sub">From digital pixel to physical paper: a modern e-commerce &amp; print engine</p>
-    <p class="lead">An interactive walkthrough based on our team's company visit to Drukwerkdeal's automated print facility in Deventer.</p>
+    <p class="lead">An interactive walkthrough based on our team's company visit to Drukwerkdeal's print production site in Deventer.</p>
     <div class="pills"><span>Cimpress ecosystem</span><span>Web-to-print</span><span>Mass customization</span></div>
     <a class="cta" href="#journey">Start the tour ↓</a>
   </section>
@@ -156,12 +156,12 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
   <!-- CHAPTER 2 -->
   <section>
     <p class="chapter">Chapter 2 · Foundation &amp; history</p>
-    <h2>Built in Deventer, scaled online</h2>
-    <p class="intro">Drukwerkdeal started as an online print shop and grew into one of the larger web-to-print companies in the Benelux, selling custom printed products to businesses.</p>
+    <h2>Built in Deventer, part of a global group</h2>
+    <p class="intro">Drukwerkdeal is an online printer: businesses design and order custom printed products on its website, and the company produces and delivers them.</p>
     <div class="tl">
-      <div class="ev"><span class="yr">2005</span><h3>Deventer roots</h3><p>Founded in Deventer with a simple idea: let businesses order custom print through a website instead of phone quotes and paper catalogues.</p></div>
-      <div class="ev"><span class="yr">2014</span><h3>Joining Cimpress</h3><p>Acquired by Cimpress, the parent company of Vistaprint, becoming part of a global group of mass-customization businesses.</p></div>
-      <div class="ev"><span class="yr">Today</span><h3>Print for Dutch &amp; Belgian businesses</h3><p>Business cards, flyers, banners, stationery and promotional products, each one customized, ordered online and produced in volume.</p></div>
+      <div class="ev"><span class="yr">2005</span><h3>Deventer roots</h3><p>Drukwerkdeal is founded in Deventer as a web-to-print company, selling custom print to businesses online.</p></div>
+      <div class="ev"><span class="yr">2014</span><h3>Joining Vistaprint / Cimpress</h3><p>Its Deventer parent group (People &amp; Print Group, later renamed Printdeal) is acquired by Vistaprint N.V., which renames itself Cimpress later that year. Drukwerkdeal becomes part of this global group of mass-customization businesses.</p></div>
+      <div class="ev"><span class="yr">Today</span><h3>Print for Dutch &amp; Belgian businesses</h3><p>Business cards, flyers, banners, stationery and promotional products, each one customized and ordered online. Production runs from a site in Deventer.</p></div>
     </div>
   </section>
 
@@ -169,7 +169,7 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
   <section id="journey">
     <p class="chapter">Chapter 3 · From click to creation</p>
     <h2>Follow one order</h2>
-    <p class="intro">Every order is unique, yet the factory has to run like a production line. Tap through the six stages an order goes through.</p>
+    <p class="intro">Every order is unique, yet the factory has to run like a production line. Tap through the six stages a typical web-to-print order goes through.</p>
     <div class="steps" id="steps" role="tablist"></div>
     <div class="stage" id="stage" role="tabpanel" aria-live="polite"></div>
   </section>
@@ -177,8 +177,8 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
   <!-- CHAPTER 4 -->
   <section id="game">
     <p class="chapter">Chapter 4 · Your turn</p>
-    <h2>Gang the sheet</h2>
-    <p class="intro">Printing one customer's 100 business cards on its own press run would waste paper and setup time. So orders from different customers are combined on one sheet. Tap orders to place them on the press sheet and fill at least <b>90%</b> of it before sending it to the press.</p>
+    <h2>Fill the press sheet</h2>
+    <p class="intro">Printing one customer's 100 business cards on its own press run would waste paper and setup time. That is why online printers commonly combine orders from different customers on one sheet, so one print run serves many customers at once. Tap orders to place them on the press sheet and fill at least <b>90%</b> of it before sending it to the press.</p>
     <div class="game">
       <div class="g-top">
         <div class="meter">
@@ -219,6 +219,18 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:v
 <script>
 const $ = s => document.querySelector(s);
 
+/* ---------- keep the title on screen ---------- */
+function fitTitle() {
+  const h = document.querySelector('.hero h1'); if (!h) return;
+  h.style.fontSize = '';
+  const max = h.parentElement.clientWidth;
+  let fs = parseFloat(getComputedStyle(h).fontSize);
+  while (h.scrollWidth > max && fs > 20) { fs -= 2; h.style.fontSize = fs + 'px'; }
+}
+fitTitle();
+window.addEventListener('resize', fitTitle);
+document.fonts && document.fonts.ready.then(fitTitle);
+
 /* ---------- Chapter 3: order journey ---------- */
 const STEPS = [
   { t: 'Order', ill: 'cart',
@@ -227,7 +239,7 @@ const STEPS = [
   { t: 'File check', ill: 'check',
     d: 'Software checks the uploaded file automatically: correct size, bleed, resolution and colour mode. Problems are flagged before anything is printed.',
     e: 'Catching errors early is cheaper than reprinting later. It is quality control at the very start of the line.' },
-  { t: 'Ganging', ill: 'grid',
+  { t: 'Combining orders', ill: 'grid',
     d: 'Orders with the same paper and finish are grouped and placed together on one large press sheet, often mixing many different customers.',
     e: 'A packing and batching problem: fill every sheet as fully as possible to reduce waste and setup time.' },
   { t: 'Printing', ill: 'press',
@@ -235,7 +247,7 @@ const STEPS = [
     e: 'Machine time is the bottleneck, so scheduling decides how many orders the factory can handle per day.' },
   { t: 'Cut & finish', ill: 'cut',
     d: 'The printed sheets are cut into individual products and finished, for example by folding, laminating or rounding corners, and sorted back to each order.',
-    e: 'After ganging, everything has to be split up again. Tracking each piece back to the right order is critical.' },
+    e: 'After combining, everything has to be split up again. Tracking each piece back to the right order is critical.' },
   { t: 'Ship', ill: 'box',
     d: 'Orders are packed, labelled and handed to delivery partners, so the customer receives a parcel at their door.',
     e: 'Lead time and on-time delivery are what the customer actually feels, so the whole chain is tuned for speed.' }
@@ -263,18 +275,18 @@ function renderSteps() {
       <div class="eng"><b>ENGINEERING VIEW</b>${s.e}</div>
       <div class="stage-nav">
         <button class="btn" id="prev" ${cur === 0 ? 'disabled' : ''}>← Back</button>
-        <button class="btn red" id="next">${cur === STEPS.length - 1 ? 'Try ganging yourself →' : 'Next stage →'}</button>
+        <button class="btn red" id="next">${cur === STEPS.length - 1 ? 'Try it yourself →' : 'Next stage →'}</button>
       </div>
     </div>`;
   $('#prev').addEventListener('click', () => go(cur - 1));
   $('#next').addEventListener('click', () => cur === STEPS.length - 1 ? $('#game').scrollIntoView({ behavior: 'smooth' }) : go(cur + 1));
   const active = document.querySelector('.st[aria-selected="true"]');
-  active && active.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  if (active) { const box = $('#steps'); box.scrollLeft = active.offsetLeft - box.offsetLeft - 16; }
 }
 function go(i) { cur = Math.max(0, Math.min(STEPS.length - 1, i)); seen.add(cur); renderSteps(); }
 renderSteps();
 
-/* ---------- Chapter 4: gang-run puzzle ---------- */
+/* ---------- Chapter 4: press sheet puzzle ---------- */
 const SLOTS = 24;
 const POOL = [
   ['Business cards', 'Bakery', 2], ['Business cards', 'Law firm', 2], ['Flyers', 'Gym', 4], ['Flyers', 'Café', 4],
